@@ -19,6 +19,9 @@
         position: relative;
         width: 50%;
         left: 25%;
+        background-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 1px 1px 2px black;
+        margin-top: 20px;
     }
     body{
         background-image: url('https://d3i6fh83elv35t.cloudfront.net/static/2018/08/Books_HD_8314929977-1024x682.jpg');
@@ -31,7 +34,7 @@
     <div id="divbody">
         <div class="container">
             <center>
-                <h1>Enrollment Simulation</h1>
+                <h1>Enrollment Form</h1><br>
             </center>
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -55,9 +58,10 @@
                 <label for="subject"><i class="fas fa-laptop"></i>&nbsp;&nbsp;Course and Year</label>
                 <input type="text" id="cy" class="form-control" placeholder="Course and Year">
             </div>
-        </div>
+            <button type="submit" id="btnSubmit" class="btn btn-primary">Enroll</button>
+        </div><br>
 
-        <button type="submit" id="btnSubmit" class="btn btn-primary">Enroll</button>
+       
     </div>
     <div class="modal" id="mymodal"><div class="modal-content"><h1 class="d-flex justify-content-center">ENROLLED SUCCESSFULLY</h1></div></div>
 
