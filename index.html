@@ -19,6 +19,12 @@
         width: 50%;
         left: 25%;
     }
+    body{
+        background-image: url('https://d3i6fh83elv35t.cloudfront.net/static/2018/08/Books_HD_8314929977-1024x682.jpg');
+        background-position-y: 40%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }   
 </style>
 <body>
     <div id="divbody">
@@ -52,7 +58,7 @@
 
         <button type="submit" id="btnSubmit" class="btn btn-primary">Enroll</button>
     </div>
-    <!-- <div class="modal" id="mymodal"><div class="modal-content"><h1 class="d-flex justify-content-center">ENROLLED SUCCESSFULLY</h1></div></div> -->
+    <div class="modal" id="mymodal"><div class="modal-content"><h1 class="d-flex justify-content-center">ENROLLED SUCCESSFULLY</h1></div></div>
 
     <script>
         $(document).ready(function () {
@@ -62,7 +68,7 @@
                 var name1 = $("#fname").val() + " " + $("#lname").val();
                 var email1 = $("#email").val();
                 var cy1 = $("#cy").val();
-                // $('#mymodal').modal();setTimeout(function(){$('#mymodal').modal('hide');},2000);
+                $('#mymodal').modal();setTimeout(function(){$('#mymodal').modal('hide');},2000);
                 $.ajax({
                     type: "POST",
                     crossDomain: true,
