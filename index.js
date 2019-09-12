@@ -14,9 +14,12 @@ http.createServer(function (request, response) {
         let param = q.pathname.toLowerCase();
         fsread.read(param, response);
     }
-    request.on('data', function (data) {
+    else if (q.pathname.includes('enroll')) {
+        request.on('data', function (data) {
             fssave.save(data);
-    });
+        });
+    }
+
     request.on('end', function () {
         response.writeHead(200, {
             'Context-Type': 'text/plain',
